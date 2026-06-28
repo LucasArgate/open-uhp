@@ -11,7 +11,7 @@ Definição dos **atores** do `u.health`, seus papéis, obrigações e garantias
 | **Citizen** | Dono soberano do histórico longitudinal de saúde. | Paciente / cidadão |
 | **Node** | Agente de percepção e execução na borda (S1). | UBS, hospital, clínica, sensor |
 | **Mother Entity** | Núcleo de deliberação determinística e orquestração (S2). | Núcleo central / digestor global |
-| **Observer** | Auditoria, controle, comitê de ética (opcional). | Órgão de controle, Sistema 3 |
+| **Observer** | Auditoria, controle, comitê de ética (opcional). | Órgão de controle, Sistema 3 (Human-in-the-Loop) |
 
 ---
 
@@ -62,7 +62,7 @@ Núcleo de deliberação determinística (S2) e orquestração.
 - Aplicar **equidade algorítmica** (L2): rejeitar payloads que usem variável política/comercial/socioeconômica como peso de alocação.
 - Gerar **trilha imutável** (append-only) para toda decisão crítica.
 - Emitir `RAISE_ALERT` a `Observers` diante de surto, ruptura logística ou fraude.
-- Escalar para `Observer`/humano (Sistema 3) quando a incerteza exceder o limiar.
+- Escalar para `Observer`/humano (Sistema 3 — Human-in-the-Loop) quando a incerteza exceder o limiar.
 
 ### Garantias
 
@@ -73,7 +73,7 @@ Núcleo de deliberação determinística (S2) e orquestração.
 
 ## 5. Observer (Observador)
 
-Ator **opcional** de auditoria e controle (órgãos de controle, comitês de ética, Sistema 3).
+Ator **opcional** de auditoria e controle (órgãos de controle, comitês de ética, Sistema 3 / Human-in-the-Loop).
 
 ### Direitos
 

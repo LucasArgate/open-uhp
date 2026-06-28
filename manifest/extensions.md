@@ -53,7 +53,7 @@ Toda extensão se declara via campo `meta` no envelope da mensagem:
 ### 2.5 Auditoria de fraude
 
 - Cruzamento de compras/licitações vs. capacidade instalada e histórico de preços.
-- Anomalia → `RAISE_ALERT` (`alert_class: FRAUD`) + escalonamento humano.
+- Anomalia → `RAISE_ALERT` (`alert_class: FRAUD`) + escalonamento humano (Sistema 3 — Human-in-the-Loop).
 
 ---
 

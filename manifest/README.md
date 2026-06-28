@@ -61,7 +61,7 @@ As cinco **Leis Imutáveis** são invariantes do protocolo, validadas na camada 
 | **Citizen** | Dono soberano do histórico longitudinal; concede/revoga consentimento. |
 | **Node** | Agente na borda (UBS, hospital, clínica, sensor) — percepção e execução local (S1). |
 | **Mother Entity** | Núcleo central — deliberação determinística (S2), orquestração e digestor global. |
-| **Observer** | Opcional: órgãos de controle, auditoria, comitês de ética (Sistema 3). |
+| **Observer** | Opcional: órgãos de controle, auditoria, comitês de ética (Sistema 3 — Human-in-the-Loop). |
 | **Mensagens** | OBSERVE_SIGNAL, REQUEST_CARE, ASSESS_PRIORITY, ALLOCATE_RESOURCE, UPDATE_STATUS, RAISE_ALERT, GRANT_CONSENT. |
 | **Estados** | PROPOSED, AUTHORIZED, IN_PROGRESS, COMPLETED, REJECTED, ESCALATED, FROZEN. |
 
