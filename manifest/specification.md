@@ -55,9 +55,9 @@ urgency_score ≥ limiar_crítico → S1 recebe autorização provisória de byp
 
 Fundamentação: Lei da Supremacia do Cuidado (L1) + escalonamento preemptivo.
 
-### 2.4 Sistema 3 — Escalonamento humano
+### 2.4 Sistema 3 — Human-in-the-Loop (HITL)
 
-Conflitos éticos irreconciliáveis ou incerteza acima do limiar matemático → decisão entregue a humano de alta confiança (médico, comitê de ética). Ver `ESCALATED` em §5.
+O **Sistema 3 é o *Human-in-the-Loop* (HITL)**: o escalonamento humano. Conflitos éticos irreconciliáveis ou incerteza acima do limiar matemático → decisão entregue a humano de alta confiança (médico, comitê de ética). Ver `ESCALATED` em §5.
 
 ---
 
@@ -97,7 +97,7 @@ flowchart LR
 3. **Priorização:** A `Mother Entity` computa `ASSESS_PRIORITY` (determinístico).
 4. **Orquestração:** A `Mother Entity` emite `ALLOCATE_RESOURCE` com equidade algorítmica.
 5. **Execução:** O `Node` confirma com `UPDATE_STATUS` até `COMPLETED`.
-6. **Exceção:** Surto/ruptura/fraude → `RAISE_ALERT` ao `Observer`; incerteza alta → `ESCALATED` (Sistema 3).
+6. **Exceção:** Surto/ruptura/fraude → `RAISE_ALERT` ao `Observer`; incerteza alta → `ESCALATED` (Sistema 3 / Human-in-the-Loop).
 
 ---
 
@@ -112,7 +112,7 @@ stateDiagram-v2
   IN_PROGRESS --> COMPLETED: UPDATE_STATUS (done)
   IN_PROGRESS --> ESCALATED: incerteza > limiar
   PROPOSED --> FROZEN: RAISE_ALERT (incidente)
-  ESCALATED --> AUTHORIZED: decisão humana (Sistema 3)
+  ESCALATED --> AUTHORIZED: decisão humana (Sistema 3 / HITL)
   REJECTED --> [*]
   COMPLETED --> [*]
   FROZEN --> [*]
@@ -125,7 +125,7 @@ stateDiagram-v2
 | `IN_PROGRESS` | Recurso alocado; execução em curso. |
 | `COMPLETED` | Cuidado/alocação concluído com trilha imutável. |
 | `REJECTED` | Recusado (viola lei ou escopo); motivo determinístico. |
-| `ESCALATED` | Incerteza acima do limiar → decisão humana (Sistema 3). |
+| `ESCALATED` | Incerteza acima do limiar → decisão humana (Sistema 3 / Human-in-the-Loop). |
 | `FROZEN` | Congelado por incidente (fraude, ruptura) até resolução. |
 
 ---
